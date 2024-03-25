@@ -11,6 +11,18 @@
         public string Plot { get; set; }
         public double Rating { get; set; }
 
+        public Movie(MovieDTO movie)
+        {
+            Id = Guid.NewGuid();
+            this.Title = movie.Title;
+            this.Year = movie.Year;
+            this.Rating = movie.Rating;
+            this.Director = movie.Director;
+            this.Cast = movie.Cast;
+            this.Genre = movie.Genre;
+            this.Plot = movie.Plot;
+
+        }
 
         public Movie(string title, int year, string director, List<string>? genre, List<string>? cast, string? plot, double rating)
         {
