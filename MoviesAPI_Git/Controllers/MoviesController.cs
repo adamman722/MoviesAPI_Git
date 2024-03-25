@@ -6,6 +6,10 @@ using System.Net.Http.Headers;
 
 namespace MoviesAPI_Git.Controllers
 {
+    /// <summary>
+    /// Simple API to give movies to users.
+    /// TODO: Figure out how to make this reset every 4 hours
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class MoviesController : ControllerBase
@@ -58,7 +62,7 @@ namespace MoviesAPI_Git.Controllers
 
             }
 
-            return BadRequest("You man need to give some tokens to Bear.");
+            return BadRequest("You may need to give some tokens to Bear.");
         }
 
     }

@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MoviesAPI_Git.Repo;
 using MoviesAPI_Git.DTO;
-using System.ComponentModel;
 
 namespace MoviesAPI_Git.Controllers
 {
@@ -31,14 +29,5 @@ namespace MoviesAPI_Git.Controllers
 
             return Ok(tokenDTO.Id);
         }
-
-        //[HttpGet, Route("viewAllTokens")]
-
-        //public IActionResult GetTokenAsync()
-        //{
-        //    TokenManager.RemoveExpiredItems();
-
-        //    return Ok(TokenManager.GetTokens());
-        //}
     }
 }

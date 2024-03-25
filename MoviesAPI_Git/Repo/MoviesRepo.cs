@@ -2,6 +2,9 @@
 
 namespace MoviesAPI_Git.Repo
 {
+    /// <summary>
+    /// Simple repo for some starter movies.
+    /// </summary>
     public class MoviesRepo
     {
         public static ICollection<Movie> movies = new HashSet<Movie>() {

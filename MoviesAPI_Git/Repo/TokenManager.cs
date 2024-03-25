@@ -2,6 +2,10 @@
 
 namespace MoviesAPI_Git.Repo
 {
+    /// <summary>
+    /// Main purpose with this file is to create a in-house memory of all tokens that are created.
+    /// TODO: Move to an off-site DB
+    /// </summary>
     public static class TokenManager
     {
         private static Dictionary<Guid, TokenDTO> _items = new Dictionary<Guid, TokenDTO>();
@@ -21,12 +25,14 @@ namespace MoviesAPI_Git.Repo
                 _items.Remove(kvp.Key);
             }
         }
-        public static Dictionary<Guid, TokenDTO> GetTokens() { return _items; }
+
+        // Extra function to check to see all tokens
+        //public static Dictionary<Guid, TokenDTO> GetTokens() { return _items; }
 
         public static bool ValidUser(Guid token)
         {
             RemoveExpiredItems();
-     return( _items.ContainsKey(token));
+            return (_items.ContainsKey(token));
         }
     }
 }
