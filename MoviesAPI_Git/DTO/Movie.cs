@@ -11,7 +11,7 @@
         public string Plot { get; set; }
         public double Rating { get; set; }
 
-        public Movie(MovieDTO movie)
+        public Movie(MovieRequest movie)
         {
             Id = Guid.NewGuid();
             this.Title = movie.Title;

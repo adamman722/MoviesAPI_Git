@@ -23,7 +23,7 @@ namespace MoviesAPI_Git.Controllers
         }
 
         [HttpPost]
-        public IActionResult postMovies(MovieDTO movie)
+        public IActionResult postMovies(MovieRequest movie)
         {
 
             if (movie == null)

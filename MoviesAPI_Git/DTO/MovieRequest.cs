@@ -1,6 +1,6 @@
 ﻿namespace MoviesAPI_Git.DTO
 {
-    public class MovieDTO
+    public class MovieRequest
     {
         public string? Title { get; set; }
         public int Year { get; set; }

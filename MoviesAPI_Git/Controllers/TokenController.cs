@@ -23,6 +23,7 @@ namespace MoviesAPI_Git.Controllers
         [HttpGet]
         public IActionResult GetToken()
         {
+            var req = Request;
             TokenDTO tokenDTO = new TokenDTO();
 
             TokenManager.AddItem(tokenDTO, TimeSpan.FromSeconds(600));
