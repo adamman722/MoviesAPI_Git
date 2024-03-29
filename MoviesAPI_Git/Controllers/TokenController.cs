@@ -9,7 +9,7 @@ namespace MoviesAPI_Git.Controllers
     public class TokenController : ControllerBase
     {
         /// <summary>
-        /// Gives you a token that lats for 10 minutes
+        /// Gives you a token that lats for 3 minutes
         /// </summary>
         /// <returns> </returns>
         ///// <remarks>
@@ -26,7 +26,7 @@ namespace MoviesAPI_Git.Controllers
             var req = Request;
             TokenDTO tokenDTO = new TokenDTO();
 
-            TokenManager.AddItem(tokenDTO, TimeSpan.FromSeconds(600));
+            TokenManager.AddItem(tokenDTO, TimeSpan.FromSeconds(180));
 
             return Ok(tokenDTO.Id);
         }
